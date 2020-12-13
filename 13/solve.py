@@ -18,7 +18,7 @@ with open("input") as inp:
 c = []
 bus_ids = buses.values()
 for id in bus_ids:
-    c.append(id * (depart//id + 1) - depart)
+    c.append(id - depart % id)
 
 
 print("Part 1: ", min(c) * list(bus_ids)[c.index(min(c))])
