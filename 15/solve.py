@@ -6,7 +6,7 @@ START_NB = [1, 0, 18, 10, 19, 6]
 def solve(starting_numbers):
     for n in starting_numbers:
         yield n
-    history = {v: i for i, v in enumerate(starting_numbers)}
+    history = {v: i for i, v in enumerate(starting_numbers[:-1])}
     last_spoken = starting_numbers[-1]
     for current_turn in itertools.count(len(starting_numbers)):
         previous_turn = current_turn - 1
